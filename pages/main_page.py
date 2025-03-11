@@ -1,12 +1,8 @@
-import time
 import allure
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.support.wait import WebDriverWait
 
-from conftest import driver
 from locators.main_page_locators import MainPageLocators
 from pages.base_page import BasePage
-from locators import main_page_locators
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 

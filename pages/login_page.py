@@ -5,7 +5,7 @@ from pages.base_page import BasePage
 
 class LoginPage(BasePage):
     @allure.step('Клик на Восстановить пароль')
-    def click_to_personal_account(self):
+    def click_to_recovery_password(self):
         self.click_to_element(LoginPageLocators.PASSWORD_RECOVERY_BUTTON)
 
     @allure.step('Вводим пароль - в поле пароль в форме авторизации')

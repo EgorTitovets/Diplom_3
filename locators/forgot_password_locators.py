@@ -5,7 +5,12 @@ class ForgotPasswordPageLocators:
     LOGIN_IN_PASSWORD_PASSWORD_RECOVERY_FORM = [By.XPATH,
                                                 "//a[contains(@class , 'Auth_link') and text() = 'Войти']"]  # кнопка "Войти" в форме восстановления пароля
     EMAIL_INPUT_FIELD_RECOVERY_FORM = [By.XPATH,
-                                      "//label[text()='Email']/following-sibling::input"]  # поле ввода email в восстановлении пароля
+                                       "//label[text()='Email']/following-sibling::input"]  # поле ввода email в восстановлении пароля
 
     RECOVERY_BUTTON = [By.XPATH,
-                       "//button[contains(@class, 'button_button_type_primary') and text()='Восстановить']"] # кнопка "Восстановить" в форме восстановления пароля
+                       "//button[contains(@class, 'button_button_type_primary') and text()='Восстановить']"]  # кнопка "Восстановить" в форме восстановления пароля
+
+    # RESET_PAGE_HEADER = [By.XPATH,
+    #                      "//h2[text()='Восстановление пароля']"]  # заголовок Восстановление пароля
+
+    RESET_PAGE_HEADER = (By.XPATH, "//*[@id='root']/div/main/div/h2[text()='Восстановление пароля']")

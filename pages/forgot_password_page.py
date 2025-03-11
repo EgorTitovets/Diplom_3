@@ -12,3 +12,7 @@ class ForgotPasswordPage(BasePage):
     @allure.step('Клик на Восстановить в форме восстановления пароля')
     def click_to_recovery_button(self):
         self.click_to_element(ForgotPasswordPageLocators.RECOVERY_BUTTON)
+
+    @allure.step('Проверяем, что заголовок "Восстановление пароля" отображается.')
+    def is_reset_page_opened(self):
+        return self.find_element_with_wait(ForgotPasswordPageLocators.RESET_PAGE_HEADER)
