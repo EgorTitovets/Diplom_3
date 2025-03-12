@@ -19,3 +19,7 @@ class LoginPage(BasePage):
     @allure.step('Клик на кнопку Войти')
     def click_to_enter(self):
         self.click_to_element(LoginPageLocators.LOGIN_FINISH_BUTTON)
+
+    @allure.step('Проверяем, что открылась страница Авторизации (произошел разлогин)')
+    def is_login_page_opened(self):
+        return self.find_element_with_wait(LoginPageLocators.LOGIN_PAGE_HEADER)

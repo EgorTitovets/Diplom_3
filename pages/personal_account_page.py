@@ -16,3 +16,11 @@ class PersonalAccountPage(BasePage):
     @allure.step('Клик на Выход')
     def click_to_exit(self):
         self.click_to_element(PersonalAccountPageLocators.EXIT)
+
+    @allure.step('Проверяем, что открылся Личный кабинет (Находим раздел Профиль)')
+    def is_profile_in_personal_account(self):
+        return self.find_element_with_wait(PersonalAccountPageLocators.PROFILE)
+
+    @allure.step('Проверяем, что открылся раздел История Заказов (проверяем отображения списка заказов)')
+    def is_order_history_opened(self):
+        return self.find_element_with_wait(PersonalAccountPageLocators.LIST_OF_ORDERS)

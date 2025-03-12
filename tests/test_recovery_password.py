@@ -1,5 +1,3 @@
-import time
-
 import allure
 from conftest import driver
 from pages.main_page import MainPage

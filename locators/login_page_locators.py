@@ -10,3 +10,6 @@ class LoginPageLocators:
                                                "//label[text()='Пароль']/following-sibling::input"]  # поле ввода пароль в авторизации
     LOGIN_FINISH_BUTTON = [By.XPATH,
                            "//button[contains(@class, 'button_button_type_primary') and text()='Войти']"]  # кнопка "Войти" в форме авторизации (при вводе Email и Пароль)
+
+    LOGIN_PAGE_HEADER = [By.XPATH,
+                         "//h2[text()='Вход']"]  # заголовой страаницы аавторизации (логина) на котором написано Вход
