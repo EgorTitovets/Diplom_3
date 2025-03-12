@@ -11,6 +11,16 @@ class ForgotPasswordPageLocators:
                        "//button[contains(@class, 'button_button_type_primary') and text()='Восстановить']"]  # кнопка "Восстановить" в форме восстановления пароля
 
     # RESET_PAGE_HEADER = [By.XPATH,
-    #                      "//h2[text()='Восстановление пароля']"]  # заголовок Восстановление пароля
+    #                      "//h2[text()='Восстановление пароля']"]  # заголовок Восстановление пароля (дополнительный xpath)
 
-    RESET_PAGE_HEADER = (By.XPATH, "//*[@id='root']/div/main/div/h2[text()='Восстановление пароля']")
+    RESET_PAGE_HEADER = (
+    By.XPATH, "//*[@id='root']/div/main/div/h2[text()='Восстановление пароля']")  # заголовок "Восстановление пароля"
+
+    INPUT_RECOVERY_CODE = [By.XPATH,
+                           "//label[contains(@class, 'input__placeholder') and text()='Введите код из письма']"]  # поле ввода кода из письма
+
+    PASSWORD_VISIBILITY = [By.XPATH,
+                           "//div[contains(@class, 'input__icon input__icon-action')]"]  # область показать/скрыть пароль
+
+    INPUT_FIELD_ACTIVE = [By.XPATH,
+                          "//div[contains(@class, 'input_status_active']"]
