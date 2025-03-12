@@ -37,6 +37,17 @@ class MainPage(BasePage):
     def click_to_cross_in_popup_with_the_details_of_the_ingredient(self):
         self.click_to_element(MainPageLocators.CROSS_IN_POPUP_WITH_THE_DETAILS_OF_THE_INGREDIENT)
 
+    @allure.step("Проверяем, что находимся на Общей/главной странице Конструктора с информингом 'Соберите бургер'")
+    def is_constructor_main_page_opened(self):
+        element = self.find_element_with_wait(MainPageLocators.CONSTRUCTOR_GENERAL_FORM)
+        return element.is_displayed()
+
+    @allure.step("Проверяем, что находимся в разделе Лента Заказов")
+    def is_order_feed_opened(self):
+        element = self.find_element_with_wait(MainPageLocators.ORDER_FEED_PAGE_HEADER)
+        return element.is_displayed()
+
+
     @allure.step('Добавить ингредиент в корзину')
     def add_ingredient_in_basket(self):
         actions = ActionChains(self.driver)
@@ -49,4 +60,7 @@ class MainPage(BasePage):
             EC.presence_of_element_located(MainPageLocators.INGREDIENT_SAUCE_SPICY_X)
         ) # это вместо sleep, возможно можно это убрать и сделать time.sleep (для отладки)
         #time.sleep(2)
+
+
+
 

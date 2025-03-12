@@ -26,9 +26,11 @@ class MainPageLocators:
     BASKET_ORDER = [By.XPATH,
                     "//ul[contains(@class, 'BurgerConstructor_basket')]"]  # корзина заказа
 
+    CONSTRUCTOR_GENERAL_FORM = [By.XPATH,
+                                "//h1[contains(@class, 'text_type_main-large') and text()='Соберите бургер']"]  # Общая/главная страница Конструктора с информингом "Соберите бургер"
 
-
-
+    ORDER_FEED_PAGE_HEADER = [By.XPATH,
+                              "//h1[text()='Лента заказов']"]  # заголовок раздела Лента Заказов
 
     class TestLocators:
         LOGIN_IN_REGISTRATION_FORM = [By.XPATH,
@@ -55,9 +57,6 @@ class MainPageLocators:
 
         PLACE_ORDER_BUTTON = [By.XPATH,
                               "//*[text()='Оформить заказ']"]  # кнопка "Оформить заказ" у авторизованного пользователя
-
-        CONSTRUCTOR_GENERAL_FORM = [By.XPATH,
-                                    "//h1[contains(@class, 'text_type_main-large') and text()='Соберите бургер']"]  # Общая/главная страница Конструктора с информингом "Соберите бургер"
 
         STELLAR_BURGERS_BUTTON = [By.XPATH, "//a/*[name()='svg']"]  # логотип Stellar Burgers
 
