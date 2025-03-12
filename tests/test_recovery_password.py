@@ -30,7 +30,8 @@ class TestRecoveryPasswordPage:
         recovery_password_page.click_to_recovery_button()
         assert recovery_password_page.is_recovery_code_field_displayed(), "Ввод почты и клик по кнопке 'Восстановить' - не получился"
 
-    @allure.description('Тест проверяет, что клик по кнопке показать/скрыть пароль делает поле активным — подсвечивает его')
+    @allure.description(
+        'Тест проверяет, что клик по кнопке показать/скрыть пароль делает поле активным — подсвечивает его')
     def test_password_field_highlighted(self, driver):
         main_page = MainPage(driver)
         login_page = LoginPage(driver)

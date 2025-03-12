@@ -9,6 +9,10 @@ def driver():
     yield driver
     driver.quit()
 
+# @pytest.fixture
+# def driver():
+#     driver = webdriver.Firefox()
+#     driver.get("https://stellarburgers.nomoreparties.site/")
+#     yield driver
+#     driver.quit()
 
-
-    #titovets_17@gmail.com, пароль: test123 , name: test

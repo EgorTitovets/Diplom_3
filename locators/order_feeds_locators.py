@@ -6,4 +6,4 @@ class OrderFeedsPageLocators:
                "//*[@id='root']/div/main/div/div/ul/li[1]"]  # Первый заказ в списке заказов
 
     POPUP_WINDOW_WITH_DETAILS = [By.XPATH,
-                                 "/*[@id='root']/div/section[2]/div[1]/div"]  # всплывающее окно с деталями
+                                 "//p[text()='Cостав']"]  # всплывающее окно с деталями "Состав"

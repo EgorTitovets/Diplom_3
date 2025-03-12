@@ -11,4 +11,5 @@ class OrderFeedsPage(BasePage):
 
     @allure.step('Находим всплывающее окно с деталями заказа')
     def find_popup_window_with_details(self):
-        self.find_element_with_wait(OrderFeedsPageLocators.POPUP_WINDOW_WITH_DETAILS)
+        return self.find_element_with_wait(OrderFeedsPageLocators.POPUP_WINDOW_WITH_DETAILS)
+
