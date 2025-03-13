@@ -40,3 +40,6 @@ class MainPageLocators:
 
     ORDER_CONFIRMATION_POPUP = [By.XPATH,
                                 "//p[text()='Ваш заказ начали готовить']"]  # popup об успешном оформлении заказа
+
+    CROSS_IN_POPUP = [By.XPATH,
+                      "//*[@id='root']/div/section[1]/div[1]/button"]  # крестик на всплывающем окне

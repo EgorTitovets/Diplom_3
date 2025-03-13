@@ -16,5 +16,3 @@ class PersonalAccountPageLocators:
 
     LIST_OF_ORDERS = [By.XPATH,
                       "//div[contains(@class, 'OrderHistory_orderHistory')]"]
-
-

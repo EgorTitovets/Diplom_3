@@ -81,3 +81,11 @@ class MainPage(BasePage):
     def is_order_confirmation_popup_displayed(self):
         element = self.find_element_with_wait(MainPageLocators.ORDER_CONFIRMATION_POPUP)
         return element.is_displayed()
+
+    @allure.step('Клик на "Крестик", всплывающего окна')
+    def click_to_cross_in_popup(self):
+        self.click_to_element(MainPageLocators.CROSS_IN_POPUP)
+
+    @allure.step("Появление крестика на popup")
+    def is_cross_opened(self):
+        self.find_element_with_wait(MainPageLocators.CROSS_IN_POPUP)

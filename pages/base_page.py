@@ -12,11 +12,11 @@ class BasePage:
         return self.driver.find_element(*locator)
 
     def find_element_with_wait(self, locator):
-        WebDriverWait(self.driver, 3).until(expected_conditions.visibility_of_element_located(locator))
+        WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located(locator))
         return self.driver.find_element(*locator)
 
     def click_to_element(self, locator):
-        WebDriverWait(self.driver, 3).until(expected_conditions.element_to_be_clickable(locator))
+        WebDriverWait(self.driver, 5).until(expected_conditions.element_to_be_clickable(locator))
         self.driver.find_element(*locator).click()
 
     def add_text_to_element(self, locator, text):
@@ -38,3 +38,10 @@ class BasePage:
     def switch_to_last_window(self):
         windows = self.driver.window_handles
         self.driver.switch_to.window(windows[-1])
+
+    @allure.step("Закрываем модальное окно")
+    def click_to_cross_in_popup(self, locator):
+        close_button = WebDriverWait(self.driver, 10).until(
+            expected_conditions.element_to_be_clickable(locator)
+        )
+        close_button.click()
