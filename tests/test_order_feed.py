@@ -105,8 +105,6 @@ class TestOrderFeedPage:
         main_page.click_to_order_feed()
         time.sleep(2)
         today_orders_after = order_feed_page.get_order_number_today()
-        print(today_orders_after)
-        print(today_orders_before)
         assert today_orders_before < today_orders_after, f"{today_orders_before}, а {today_orders_after} получились такими."
 
     @allure.description(

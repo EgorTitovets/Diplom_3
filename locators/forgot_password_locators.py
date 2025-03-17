@@ -12,7 +12,7 @@ class ForgotPasswordPageLocators:
 
     RESET_PAGE_HEADER = (
         By.XPATH,
-        "//*[@id='root']/div/main/div/h2[text()='Восстановление пароля']")  # заголовок "Восстановление пароля"
+        "//h2[text()='Восстановление пароля']")  # заголовок "Восстановление пароля"
 
     INPUT_RECOVERY_CODE = [By.XPATH,
                            "//label[contains(@class, 'input__placeholder') and text()='Введите код из письма']"]  # поле ввода кода из письма
